@@ -9,9 +9,9 @@ before_install:
   - brew update
 
 script:
-  - brew install `grep -l url Formula/*.rb|grep -v joeboy`
+  - brew install -v `grep -l url Formula/*.rb|grep -v joeboy`
   - brew test `grep -l url Formula/*.rb|grep -v joeboy`
-  - brew install --HEAD `grep -l head Formula/*.rb`
+  - brew install -v --HEAD `grep -l head Formula/*.rb`
   - brew test `grep -l head Formula/*.rb`
 
 
